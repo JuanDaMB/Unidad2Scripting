@@ -1000,6 +1000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938215032}
   - component: {fileID: 938215033}
+  - component: {fileID: 938215034}
   m_Layer: 5
   m_Name: CallObject
   m_TagString: Untagged
@@ -1040,9 +1041,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d7245a6077e7b418c8fe1c37b0e45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  channel: {fileID: 11400000, guid: 7e098939b46b5524fac0a053a033813a, type: 2}
-  ex1: {fileID: 1047160}
-  ex2: {fileID: 2086963140}
+  channel: {fileID: 11400000, guid: d3611a5638c06904dae359b40215e995, type: 2}
+  colorSwapper: {fileID: 938215034}
+--- !u!114 &938215034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938215031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87f69d22ce029a42a9cef7aa1cbe425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image1: {fileID: 1047160}
+  image2: {fileID: 2086963140}
 --- !u!1 &1000689540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1140230244}
   - component: {fileID: 1140230245}
+  - component: {fileID: 1140230246}
   m_Layer: 5
   m_Name: CallObject2
   m_TagString: Untagged
@@ -1226,9 +1241,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d7245a6077e7b418c8fe1c37b0e45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  channel: {fileID: 11400000, guid: f12854108c41a1448a5ec7fdea5ee4dc, type: 2}
-  ex1: {fileID: 92026119}
-  ex2: {fileID: 2061633475}
+  channel: {fileID: 11400000, guid: 9d50875d5ffff5f4eb38feed62cb0986, type: 2}
+  colorSwapper: {fileID: 1140230246}
+--- !u!114 &1140230246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140230243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87f69d22ce029a42a9cef7aa1cbe425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image1: {fileID: 92026119}
+  image2: {fileID: 2061633475}
 --- !u!1 &1268468810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,7 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8df3f92ce2ce544bad66746ed0ecfd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  channel: {fileID: 11400000, guid: 7e098939b46b5524fac0a053a033813a, type: 2}
+  channel: {fileID: 11400000, guid: d3611a5638c06904dae359b40215e995, type: 2}
 --- !u!1 &2086963138
 GameObject:
   m_ObjectHideFlags: 0
