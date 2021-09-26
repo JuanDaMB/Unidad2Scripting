@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PatronState : MonoBehaviour
 {
     public ChannelObjectState channel;
-    private State _state;
+    private StateExample _stateExample;
 
     [SerializeField] private IColorCall obj;
 
@@ -13,40 +13,18 @@ public class PatronState : MonoBehaviour
         channel.StateCallBack += TransitionTo;
     }
 
-    private void TransitionTo(State state)
+    private void TransitionTo(StateExample stateExample)
     {
-        _state = state;
+        _stateExample = stateExample;
         RequestColor();
     }
 
     private void RequestColor()
     {
-        if (_state == null) return;
+        if (_stateExample == null) return;
         if (obj != null)
         {
-            obj.ColorChange(_state.Accion1(), _state.Accion2());   
+            obj.ColorChange(_stateExample.Accion1(), _stateExample.Accion2());   
         }
-    }
-}
-
-public class State
-{
-    private Color _color1;
-    private Color _color2;
-
-    public State(Color color1, Color color2)
-    {
-        _color1 = color1;
-        _color2 = color2;
-    }
-
-    public virtual Color Accion1()
-    {
-        return _color1;
-    }
-
-    public virtual Color Accion2()
-    {
-        return _color2;
     }
 }
