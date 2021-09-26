@@ -3,48 +3,47 @@ using UnityEngine.UI;
 
 public class PatronState : MonoBehaviour
 {
-    public ChannelObject channel;
-    private State _state = null;
+    public ChannelObjectState channel;
+    private State _state;
 
-    [SerializeField] private Image ex1, ex2;
+    [SerializeField] private ImageColorSwapper colorSwapper;
 
     private void Start()
     {
         channel.StateCallBack += TransitionTo;
-        channel.CallBack += RequestColor;
     }
 
     private void TransitionTo(State state)
     {
         _state = state;
+        RequestColor();
     }
 
     private void RequestColor()
     {
         if (_state == null) return;
-        ex1.color = _state.Accion1();
-        ex2.color = _state.Accion2();
+        colorSwapper.ChangeColors(_state.Accion1(), _state.Accion2());
     }
 }
 
 public class State
 {
-    private Color Color1;
-    private Color Color2;
+    private Color _color1;
+    private Color _color2;
 
     public State(Color color1, Color color2)
     {
-        Color1 = color1;
-        Color2 = color2;
+        _color1 = color1;
+        _color2 = color2;
     }
 
     public virtual Color Accion1()
     {
-        return Color1;
+        return _color1;
     }
 
     public virtual Color Accion2()
     {
-        return Color2;
+        return _color2;
     }
 }
