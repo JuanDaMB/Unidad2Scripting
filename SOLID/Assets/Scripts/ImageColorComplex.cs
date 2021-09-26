@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ImageColorSwapper : IColorCall, IRotate
+public class ImageColorComplex : IColorCall, IRotate,IScale
 {
     [SerializeField] private Image image1, image2;
     
@@ -15,6 +15,11 @@ public class ImageColorSwapper : IColorCall, IRotate
 
     public void Rotate()
     {
-        image1.GetComponent<RectTransform>().Rotate(Vector3.forward, Random.Range(0f,180f));
+        image2.GetComponent<RectTransform>().Rotate(Vector3.forward, Random.Range(0f,-180f));
+    }
+
+    public void Scale()
+    {
+        image2.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, Random.Range(50f,150f));
     }
 }

@@ -5,15 +5,15 @@ using UnityEngine.Events;
 public class ChannelObject : ScriptableObject
 {
     public UnityAction CallBack;
-    public UnityAction<State> StateCallBack;
+    public UnityAction<StateExample> StateCallBack;
 
     public void CallFunction()
     {
         CallBack?.Invoke();
     }
 
-    public void CallFunctionState(State state)
+    public void CallFunctionState(StateExample stateExample)
     {
-        StateCallBack?.Invoke(state);
+        StateCallBack?.Invoke(stateExample);
     }
 }

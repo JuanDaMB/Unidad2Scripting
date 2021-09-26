@@ -4,10 +4,10 @@ using UnityEngine.Events;
 [CreateAssetMenu(menuName = "Channels/ChannelState")]
 public class ChannelObjectState : ScriptableObject
 {
-    public UnityAction<State> StateCallBack;
+    public UnityAction<StateExample> StateCallBack;
     
-    public void CallFunctionState(State state)
+    public void CallFunctionState(StateExample stateExample)
     {
-        StateCallBack?.Invoke(state);
+        StateCallBack?.Invoke(stateExample);
     }
 }
