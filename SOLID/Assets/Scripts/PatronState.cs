@@ -6,7 +6,7 @@ public class PatronState : MonoBehaviour
     public ChannelObjectState channel;
     private State _state;
 
-    [SerializeField] private ImageColorSwapper colorSwapper;
+    [SerializeField] private IColorCall obj;
 
     private void Start()
     {
@@ -22,7 +22,10 @@ public class PatronState : MonoBehaviour
     private void RequestColor()
     {
         if (_state == null) return;
-        colorSwapper.ChangeColors(_state.Accion1(), _state.Accion2());
+        if (obj != null)
+        {
+            obj.ColorChange(_state.Accion1(), _state.Accion2());   
+        }
     }
 }
 
